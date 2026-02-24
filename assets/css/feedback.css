@@ -1,0 +1,211 @@
+/* Speech Bubbles Styling */
+
+.speech-bubbles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+  align-items: start;
+  auto-rows: max-content;
+}
+
+.speech-bubble {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+  align-items: center;
+  height: 100%;
+}
+
+/* Different soft colors for each speech bubble */
+.speech-bubble:nth-child(1),
+.speech-bubble:nth-child(12n + 1) {
+  background: #ffe6e6;
+}
+
+.speech-bubble:nth-child(1) .bubble-image img,
+.speech-bubble:nth-child(12n + 1) .bubble-image img {
+  border-color: #ff9999;
+}
+
+.speech-bubble:nth-child(2),
+.speech-bubble:nth-child(12n + 2) {
+  background: #e6f3ff;
+}
+
+.speech-bubble:nth-child(2) .bubble-image img,
+.speech-bubble:nth-child(12n + 2) .bubble-image img {
+  border-color: #99d6ff;
+}
+
+.speech-bubble:nth-child(3),
+.speech-bubble:nth-child(12n + 3) {
+  background: #e6ffe6;
+}
+
+.speech-bubble:nth-child(3) .bubble-image img,
+.speech-bubble:nth-child(12n + 3) .bubble-image img {
+  border-color: #99ff99;
+}
+
+.speech-bubble:nth-child(4),
+.speech-bubble:nth-child(12n + 4) {
+  background: #fff3e6;
+}
+
+.speech-bubble:nth-child(4) .bubble-image img,
+.speech-bubble:nth-child(12n + 4) .bubble-image img {
+  border-color: #ffcc99;
+}
+
+.speech-bubble:nth-child(5),
+.speech-bubble:nth-child(12n + 5) {
+  background: #f0e6ff;
+}
+
+.speech-bubble:nth-child(5) .bubble-image img,
+.speech-bubble:nth-child(12n + 5) .bubble-image img {
+  border-color: #d9b3ff;
+}
+
+.speech-bubble:nth-child(6),
+.speech-bubble:nth-child(12n + 6) {
+  background: #e6fff9;
+}
+
+.speech-bubble:nth-child(6) .bubble-image img,
+.speech-bubble:nth-child(12n + 6) .bubble-image img {
+  border-color: #99ffdd;
+}
+
+.speech-bubble:nth-child(7),
+.speech-bubble:nth-child(12n + 7) {
+  background: #fffce6;
+}
+
+.speech-bubble:nth-child(7) .bubble-image img,
+.speech-bubble:nth-child(12n + 7) .bubble-image img {
+  border-color: #ffff99;
+}
+
+.speech-bubble:nth-child(8),
+.speech-bubble:nth-child(12n + 8) {
+  background: #f5e6ff;
+}
+
+.speech-bubble:nth-child(8) .bubble-image img,
+.speech-bubble:nth-child(12n + 8) .bubble-image img {
+  border-color: #e6b3ff;
+}
+
+.speech-bubble:nth-child(9),
+.speech-bubble:nth-child(12n + 9) {
+  background: #ffe6f0;
+}
+
+.speech-bubble:nth-child(9) .bubble-image img,
+.speech-bubble:nth-child(12n + 9) .bubble-image img {
+  border-color: #ffb3d9;
+}
+
+.speech-bubble:nth-child(10),
+.speech-bubble:nth-child(12n + 10) {
+  background: #e6f9ff;
+}
+
+.speech-bubble:nth-child(10) .bubble-image img,
+.speech-bubble:nth-child(12n + 10) .bubble-image img {
+  border-color: #99e6ff;
+}
+
+.speech-bubble:nth-child(11),
+.speech-bubble:nth-child(12n + 11) {
+  background: #f0ffe6;
+}
+
+.speech-bubble:nth-child(11) .bubble-image img,
+.speech-bubble:nth-child(12n + 11) .bubble-image img {
+  border-color: #ccff99;
+}
+
+.speech-bubble:nth-child(12),
+.speech-bubble:nth-child(12n + 12) {
+  background: #ffe6cc;
+}
+
+.speech-bubble:nth-child(12) .bubble-image img,
+.speech-bubble:nth-child(12n + 12) .bubble-image img {
+  border-color: #ffb366;
+}
+
+.speech-bubble:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Speech bubble pointer - removed for card-style layout */
+.speech-bubble::after {
+  content: "";
+  display: none;
+}
+
+/* Image Container */
+.bubble-image {
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.bubble-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+}
+
+/* Text Container */
+.bubble-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: center;
+}
+
+.bubble-text h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.bubble-text p {
+  margin: 0;
+  color: #242424;
+  font-size: 15px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .speech-bubbles {
+    grid-template-columns: 1fr;
+  }
+
+  .speech-bubble {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bubble-text {
+    text-align: center;
+  }
+}
