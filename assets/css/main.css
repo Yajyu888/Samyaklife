@@ -1875,6 +1875,49 @@ article.special {
   text-align: center;
 }
 
+/* Executive Life Coaching section */
+
+#two .coaching-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  align-items: flex-start;
+}
+
+#two .coaching-column {
+  flex: 1 1 0;
+}
+
+#two .coaching-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+#two .coaching-list h3 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+#two .coaching-list ul {
+  margin: 0;
+}
+
+#two .coaching-bio {
+  font-size: 0.95em;
+  line-height: 1.8;
+}
+
+@media screen and (max-width: 736px) {
+  #two .coaching-flex {
+    flex-direction: column;
+    gap: 2em;
+  }
+}
+
 header.major {
   width: -moz-max-content;
   width: -webkit-max-content;
@@ -3596,7 +3639,16 @@ body.is-preload #header.alt {
 }
 
 #banner > .inner header > :first-child:after {
-  max-width: 100%;
+  display: none;
+}
+
+#banner > .inner header.major > p:after {
+  content: "";
+  background-color: #ffffff;
+  display: block;
+  height: 2px;
+  margin: 0.5em 0 1em 0;
+  width: 50%;
 }
 
 #banner > .inner .content {
@@ -3604,20 +3656,24 @@ body.is-preload #header.alt {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  -moz-align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-align-items: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
   margin: 0 0 2em 0;
 }
 
 #banner > .inner .content > * {
-  margin-right: 1.5em;
-  margin-bottom: 0;
+  margin-right: 0;
+  margin-bottom: 1em;
 }
 
 #banner > .inner .content > :last-child {
-  margin-right: 0;
+  margin-bottom: 0;
 }
 
 #banner > .inner .content p {

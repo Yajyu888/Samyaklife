@@ -1,12 +1,7 @@
 <!DOCTYPE html>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
   <head>
-    <title>Kabule the wise</title>
+    <title>Samyak Life</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -23,7 +18,7 @@
       <!-- Header -->
       <header id="header" class="alt">
         <a href="index.html" class="logo"
-          ><strong>Kabule</strong> <span>the wise leader</span></a
+          ><strong>Samyak</strong> <span>Life</span></a
         >
         <nav>
           <a href="#contact">Contact</a>
@@ -112,7 +107,7 @@
               <img src="images/pic05.jpg" alt="" />
             </span>
             <header class="major">
-              <h3><a href="landing.html" class="link">The Team</a></h3>
+              <h3><a href="team.html" class="link">The Team</a></h3>
               <p>Trainers</p>
             </header>
           </article>
@@ -135,61 +130,25 @@
             </header>
           </article>
         </section>
-
-        <!-- Two -->
-        <section id="two">
-          <div class="inner">
-            <header class="major">
-              <h2>Executive Life Coaching</h2>
-            </header>
-            <p>
-              Executive Life Coaching is a one-on-one program designed to fulfill your individual development needs. It helps you identify and achieve your personal and professional goals. This program has aided people in developing the excellence in their personality as per their need and desire.
-              <br> 
-              <br>Personal development:<br>
-              Confidence building<br>
-              Happiness and peace<br>
-              Success personality<br>
-              Emotional intelligence<br>
-              Fulfilling life<br>
-              Professional development:<br>
-              Communication<br>
-              Interpersonal skills<br>
-              Leadership qualities<br>
-              Managerial skills<br>
-              Stress management<br>
-              .. … and many more that you wish to achieve for a more fulfilling personal and professional life.<br>
-
-
-R. Manandhar is a professional coach, certified NLP trainer and psychological counselor. With two decades of leadership and managerial experience in international organizations under his belt, he has been helping people better develop their personalities through training, coaching and counseling for the last six years. His programs have touched the lives of hundreds of people, who claim to have been positively transformed following their participation.
-
-Manandhar is also trained in Gestalt, Mindfulness and Positive Psychology.
-            </p>
-            <ul class="actions">
-              <li>
-                <a href="landing.html" class="button next">Get Started</a>
-              </li>
-            </ul>
-          </div>
-        </section>
       </div>
 
       <!-- Contact -->
       <section id="contact">
         <div class="inner">
           <section>
-            <form method="post" action="#">
+            <form id="contact-form" method="post" action="#">
               <div class="fields">
                 <div class="field half">
                   <label for="name">Name</label>
-                  <input type="text" name="name" id="name" />
+                  <input type="text" name="name" id="name" required />
                 </div>
                 <div class="field half">
                   <label for="email">Email</label>
-                  <input type="text" name="email" id="email" />
+                  <input type="email" name="email" id="email" required />
                 </div>
                 <div class="field">
                   <label for="message">Message</label>
-                  <textarea name="message" id="message" rows="6"></textarea>
+                  <textarea name="message" id="message" rows="6" required></textarea>
                 </div>
               </div>
               <ul class="actions">
@@ -205,7 +164,7 @@ Manandhar is also trained in Gestalt, Mindfulness and Positive Psychology.
               <div class="contact-method">
                 <span class="icon solid alt fa-envelope"></span>
                 <h3>Email</h3>
-                <a href="#">kabuleader@gmail.com</a>
+                <a href="#">samyaklife@outlook.com</a>
               </div>
             </section>
             <section>
@@ -237,28 +196,28 @@ Manandhar is also trained in Gestalt, Mindfulness and Positive Psychology.
       <footer id="footer">
         <div class="inner">
           <ul class="icons">
-            <li>
+            <!-- <li>
               <a href="#" class="icon brands alt fa-twitter"
                 ><span class="label">Twitter</span></a
               >
-            </li>
+            </li> -->
             <li>
-              <a href="#" class="icon brands alt fa-facebook-f"
+              <a href="https://www.facebook.com/KabuleTheWiseLeader" class="icon brands alt fa-facebook-f"
                 ><span class="label">Facebook</span></a
               >
             </li>
             <li>
-              <a href="#" class="icon brands alt fa-instagram"
+              <a href="https://www.instagram.com/leadership.nepal/" class="icon brands alt fa-instagram"
                 ><span class="label">Instagram</span></a
               >
             </li>
             <li>
-              <a href="#" class="icon brands alt fa-github"
-                ><span class="label">GitHub</span></a
+              <a href="https://www.youtube.com/@rmanandhar1258" class="icon brands alt fa-youtube"
+                ><span class="label">Youtube</span></a
               >
             </li>
             <li>
-              <a href="#" class="icon brands alt fa-linkedin-in"
+              <a href="https://www.linkedin.com/in/rajendra-manandhar-0b999447/" class="icon brands alt fa-linkedin-in"
                 ><span class="label">LinkedIn</span></a
               >
             </li>
@@ -279,5 +238,42 @@ Manandhar is also trained in Gestalt, Mindfulness and Positive Psychology.
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      (function () {
+        var form = document.getElementById("contact-form");
+        if (!form) return;
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var name = document.getElementById("name").value.trim();
+          var email = document.getElementById("email").value.trim();
+          var message = document.getElementById("message").value.trim();
+
+          if (!name || !email || !message) {
+            alert("Please fill in your name, email, and message.");
+            return;
+          }
+
+          var subject = "New message from website";
+          var body =
+            "Name: " +
+            name +
+            "\nEmail: " +
+            email +
+            "\n\n" +
+            message;
+
+          var mailtoLink =
+            "mailto:samyaklife@outlook.com" +
+            "?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            encodeURIComponent(body);
+
+          window.location.href = mailtoLink;
+        });
+      })();
+    </script>
   </body>
 </html>

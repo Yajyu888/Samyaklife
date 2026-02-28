@@ -6,10 +6,44 @@
     <title>Gallery</title>
 
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
     <link rel="stylesheet" href="assets/css/gallery.css" />
   </head>
-  <body>
-    <!-- Filter Buttons -->
+  <body class="is-preload">
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <a href="index.html" class="logo"
+          ><strong>Samyak</strong> <span>Life</span></a
+        >
+        <nav>
+          <a href="index.html#contact">Contact</a>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="trainingListing.html">Training</a></li>
+          <li><a href="generic.html">Publication</a></li>
+          <li><a href="elements.html">The Team</a></li>
+          <li><a href="elements.html">FAQ</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="elements.html">Contact Us</a></li>
+        </ul>
+        <ul class="actions stacked">
+          <li><a href="#" class="button primary fit">Get Started</a></li>
+          <li><a href="#" class="button fit">Log In</a></li>
+        </ul>
+      </nav>
+
+      <!-- Filter Buttons -->
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all">All Photos</button>
       <button class="filter-btn" data-filter="teambuilding">
@@ -116,15 +150,23 @@
       </div>
     </div>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-      <span class="lightbox-close">&times;</span>
-      <button class="lightbox-prev">&#10094;</button>
-      <img id="lightbox-img" src="" />
-      <button class="lightbox-next">&#10095;</button>
+      <!-- Lightbox Modal -->
+      <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <button class="lightbox-prev">&#10094;</button>
+        <img id="lightbox-img" src="" />
+        <button class="lightbox-next">&#10095;</button>
+      </div>
     </div>
 
     <!-- JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/gallery.js"></script>
   </body>
 </html>
