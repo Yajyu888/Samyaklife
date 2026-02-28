@@ -11,8 +11,16 @@
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
+    <link rel="stylesheet" href="assets/css/under-construction.css" />
+    <style>
+      .human-test-box { margin-top: 1em; padding: 1em; border: 1px solid rgba(212,212,255,0.2); }
+      .human-test-box p { margin-bottom: 0.5em; }
+      .human-test-btn { margin-right: 0.5em; padding: 0.4em 0.8em; cursor: pointer; background: rgba(212,212,255,0.1); color: inherit; border: 1px solid rgba(212,212,255,0.3); }
+      .human-test-btn:hover { border-color: #9bf1ff; color: #9bf1ff; }
+    </style>
   </head>
-  <body class="is-preload">
+  <body class="is-preload has-under-construction-banner">
+    <div id="under-construction-banner">Under Construction – We're Building Something Meaningful.</div>
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Header -->
@@ -31,9 +39,9 @@
         <ul class="links">
           <li><a href="index.html">Home</a></li>
           <li><a href="trainingListing.html">Training</a></li>
-          <li><a href="generic.html">Publication</a></li>
-          <li><a href="elements.html">The Team</a></li>
-          <li><a href="elements.html">FAQ</a></li>
+          <!-- <li><a href="generic.html">Publication</a></li> -->
+          <li><a href="team.html">The Team</a></li>
+          <!-- <li><a href="elements.html">FAQ</a></li> -->
           <li><a href="Gallery.html">Gallery</a></li>
           <li><a href="feedback.html">Feedback</a></li>
           <li><a href="elements.html">Contact Us</a></li>
@@ -150,6 +158,17 @@
                   <label for="message">Message</label>
                   <textarea name="message" id="message" rows="6" required></textarea>
                 </div>
+                <div class="field">
+                  <input type="checkbox" id="human-check" name="human" />
+                  <label for="human-check">I am a human</label>
+                </div>
+                <div id="human-test-box" class="human-test-box" style="display:none;">
+                  <p>Quick test: What is 3 + 4?</p>
+                  <button type="button" class="human-test-btn" data-answer="6">6</button>
+                  <button type="button" class="human-test-btn" data-answer="7">7</button>
+                  <button type="button" class="human-test-btn" data-answer="8">8</button>
+                  <p id="human-test-result" style="display:none; margin-top:0.5em;">You passed! You can now send your message.</p>
+                </div>
               </div>
               <ul class="actions">
                 <li>
@@ -183,8 +202,8 @@
                 <h3>Address</h3>
                 <span
                   >Kathmandu, Nepal<br />
-                  ...<br />
-                  ...</span
+                  <br />
+                  </span
                 >
               </div>
             </section>
@@ -241,10 +260,50 @@
     <script>
       (function () {
         var form = document.getElementById("contact-form");
+        var humanCheck = document.getElementById("human-check");
+        var testBox = document.getElementById("human-test-box");
+        var testResult = document.getElementById("human-test-result");
+        var humanPassed = false;
+
         if (!form) return;
+
+        if (humanCheck && testBox) {
+          humanCheck.addEventListener("change", function () {
+            if (humanCheck.checked) {
+              testBox.style.display = "block";
+              humanPassed = false;
+              if (testResult) testResult.style.display = "none";
+            } else {
+              testBox.style.display = "none";
+              humanPassed = false;
+            }
+          });
+        }
+        form.addEventListener("reset", function () {
+          humanPassed = false;
+          if (testBox) testBox.style.display = "none";
+          if (testResult) testResult.style.display = "none";
+        });
+
+        var btns = document.querySelectorAll(".human-test-btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function () {
+            if (this.getAttribute("data-answer") === "7") {
+              humanPassed = true;
+              if (testResult) testResult.style.display = "block";
+            } else {
+              alert("Incorrect. Please try again.");
+            }
+          });
+        }
 
         form.addEventListener("submit", function (event) {
           event.preventDefault();
+
+          if (!humanPassed) {
+            alert("Please check 'I am a human' and complete the simple test first.");
+            return;
+          }
 
           var name = document.getElementById("name").value.trim();
           var email = document.getElementById("email").value.trim();
@@ -264,14 +323,12 @@
             "\n\n" +
             message;
 
-          var mailtoLink =
+          window.location.href =
             "mailto:samyaklife@outlook.com" +
             "?subject=" +
             encodeURIComponent(subject) +
             "&body=" +
             encodeURIComponent(body);
-
-          window.location.href = mailtoLink;
         });
       })();
     </script>

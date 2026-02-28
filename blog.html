@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>Training - by Kabule</title>
+    <title>Training - Samyak Life</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -16,15 +16,17 @@
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
+    <link rel="stylesheet" href="assets/css/under-construction.css" />
   </head>
-  <body class="is-preload">
+  <body class="is-preload has-under-construction-banner">
+    <div id="under-construction-banner">Under Construction – We're Building Something Meaningful.</div>
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Header -->
       <!-- Note: The "styleN" class below should match that of the banner element. -->
       <header id="header" class="alt style2">
         <a href="index.html" class="logo"
-          ><strong>Kabule</strong> <span>The wise leader</span></a
+          ><strong>Samyak</strong> <span>Life</span></a
         >
         <nav>
           <a href="#menu">Menu</a>
@@ -35,9 +37,9 @@
       <nav id="menu">
         <ul class="links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="landing.html">Landing</a></li>
-          <li><a href="generic.html">Generic</a></li>
-          <li><a href="elements.html">Elements</a></li>
+          <li><a href="trainingListing.html">Training</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="elements.html">Contact</a></li>
         </ul>
         <ul class="actions stacked">
           <li><a href="#" class="button primary fit">Get Started</a></li>
@@ -205,19 +207,19 @@
       <section id="contact">
         <div class="inner">
           <section>
-            <form method="post" action="#">
+            <form id="contact-form" method="post" action="#">
               <div class="fields">
                 <div class="field half">
                   <label for="name">Name</label>
-                  <input type="text" name="name" id="name" />
+                  <input type="text" name="name" id="name" required />
                 </div>
                 <div class="field half">
                   <label for="email">Email</label>
-                  <input type="text" name="email" id="email" />
+                  <input type="email" name="email" id="email" required />
                 </div>
                 <div class="field">
                   <label for="message">Message</label>
-                  <textarea name="message" id="message" rows="6"></textarea>
+                  <textarea name="message" id="message" rows="6" required></textarea>
                 </div>
               </div>
               <ul class="actions">
@@ -233,14 +235,17 @@
               <div class="contact-method">
                 <span class="icon solid alt fa-envelope"></span>
                 <h3>Email</h3>
-                <a href="#">information@untitled.tld</a>
+                <a href="#">samyaklife@outlook.com</a>
               </div>
             </section>
             <section>
               <div class="contact-method">
                 <span class="icon solid alt fa-phone"></span>
                 <h3>Phone</h3>
-                <span>(000) 000-0000 x12387</span>
+                <span>+977 981 346 1049</span>
+                <br>Phone/ Viber/ Whatsapp</br>
+                <span>+977 984 133 9585</span>
+                <br>(If call not picked up, <br> please leave a message.<br> We will call back.)</br>
               </div>
             </section>
             <section>
@@ -248,10 +253,8 @@
                 <span class="icon solid alt fa-home"></span>
                 <h3>Address</h3>
                 <span
-                  >1234 Somewhere Road #5432<br />
-                  Nashville, TN 00000<br />
-                  United States of America</span
-                >
+                  >Kathmandu, Nepal<br />
+                </span>
               </div>
             </section>
           </section>

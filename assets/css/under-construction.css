@@ -1,0 +1,37 @@
+/*
+ * Under Construction Banner
+ * To remove when site is complete: delete this file and remove the banner
+ * from each page (the <div id="under-construction-banner"> and its <link>).
+ */
+
+#under-construction-banner {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 85%;
+  height: 0.45in;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5em;
+  background: rgba(42, 47, 74, 0.92);
+  border-bottom: 1px solid rgba(212, 212, 255, 0.08);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(244, 244, 255, 0.7);
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+body.has-under-construction-banner {
+  padding-top: 1in;
+}
+
+body.has-under-construction-banner #wrapper {
+  padding-top: 0;
+}

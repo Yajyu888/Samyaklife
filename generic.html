@@ -11,8 +11,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/under-construction.css" />
 	</head>
-	<body class="is-preload">
+	<body class="is-preload has-under-construction-banner">
+		<div id="under-construction-banner">Under Construction – We're Building Something Meaningful.</div>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -29,10 +31,10 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
+							<li><a href="trainingListing.html">Training</a></li>
+							<li><a href="team.html">Team</a></li>
+							<li><a href="elements.html">Contact</a></li>
+						  </ul>
 						<ul class="actions stacked">
 							<li><a href="#" class="button primary fit">Get Started</a></li>
 							<li><a href="#" class="button fit">Log In</a></li>
@@ -58,57 +60,75 @@
 					</div>
 
 				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
+				<section id="contact">
+					<div class="inner">
+						<section>
+							<form id="contact-form" method="post" action="#">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" required />
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" required />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="6" required></textarea>
+									</div>
+									<div class="field">
+										<input type="checkbox" id="human-check" name="human" />
+										<label for="human-check">I am a human</label>
+									</div>
+									<div id="human-test-box" class="human-test-box" style="display:none;">
+										<p>Quick test: What is 3 + 4?</p>
+										<button type="button" class="human-test-btn" data-answer="6">6</button>
+										<button type="button" class="human-test-btn" data-answer="7">7</button>
+										<button type="button" class="human-test-btn" data-answer="8">8</button>
+										<p id="human-test-result" style="display:none; margin-top:0.5em;">You passed! You can now send your message.</p>
+									</div>
+								</div>
+								<ul class="actions">
+									<li>
+										<input type="submit" value="Send Message" class="primary" />
+									</li>
+									<li><input type="reset" value="Clear" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split">
 							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
+								<div class="contact-method">
+									<span class="icon solid alt fa-envelope"></span>
+									<h3>Email</h3>
+									<a href="#">samyaklife@outlook.com</a>
+								</div>
 							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-phone"></span>
+									<h3>Phone</h3>
+									<span>+977 981 346 1049</span>
+									<br>Phone/ Viber/ Whatsapp</br>
+									<span>+977 984 133 9585</span>
+									<br>(If call not picked up, <br> please leave a message.<br> We will call back.)</br>
+								</div>
 							</section>
-						</div>
-					</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-home"></span>
+									<h3>Address</h3>
+									<span
+										>Kathmandu, Nepal<br />
+										<br />
+										</span
+									>
+								</div>
+							</section>
+						</section>
+					</div>
+				</section>
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -136,6 +156,65 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<style>
+				.human-test-box { margin-top: 1em; padding: 1em; border: 1px solid rgba(212,212,255,0.2); }
+				.human-test-box p { margin-bottom: 0.5em; }
+				.human-test-btn { margin-right: 0.5em; padding: 0.4em 0.8em; cursor: pointer; background: rgba(212,212,255,0.1); color: inherit; border: 1px solid rgba(212,212,255,0.3); }
+				.human-test-btn:hover { border-color: #9bf1ff; color: #9bf1ff; }
+			</style>
+			<script>
+				(function () {
+					var form = document.getElementById("contact-form");
+					var humanCheck = document.getElementById("human-check");
+					var testBox = document.getElementById("human-test-box");
+					var testResult = document.getElementById("human-test-result");
+					var humanPassed = false;
+					if (!form) return;
+					if (humanCheck && testBox) {
+						humanCheck.addEventListener("change", function () {
+							if (humanCheck.checked) {
+								testBox.style.display = "block";
+								humanPassed = false;
+								if (testResult) testResult.style.display = "none";
+							} else {
+								testBox.style.display = "none";
+								humanPassed = false;
+							}
+						});
+					}
+					form.addEventListener("reset", function () {
+						humanPassed = false;
+						if (testBox) testBox.style.display = "none";
+						if (testResult) testResult.style.display = "none";
+					});
+					var btns = document.querySelectorAll(".human-test-btn");
+					for (var i = 0; i < btns.length; i++) {
+						btns[i].addEventListener("click", function () {
+							if (this.getAttribute("data-answer") === "7") {
+								humanPassed = true;
+								if (testResult) testResult.style.display = "block";
+							} else {
+								alert("Incorrect. Please try again.");
+							}
+						});
+					}
+					form.addEventListener("submit", function (event) {
+						event.preventDefault();
+						if (!humanPassed) {
+							alert("Please check 'I am a human' and complete the simple test first.");
+							return;
+						}
+						var name = document.getElementById("name").value.trim();
+						var email = document.getElementById("email").value.trim();
+						var message = document.getElementById("message").value.trim();
+						if (!name || !email || !message) {
+							alert("Please fill in your name, email, and message.");
+							return;
+						}
+						window.location.href = "mailto:samyaklife@outlook.com?subject=" + encodeURIComponent("New message from website") + "&body=" + encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message);
+					});
+				})();
+			</script>
 
 	</body>
 </html>
