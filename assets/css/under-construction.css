@@ -1,37 +1,137 @@
 /*
- * Under Construction Banner
- * To remove when site is complete: delete this file and remove the banner
- * from each page (the <div id="under-construction-banner"> and its <link>).
+ * Under Construction Banner + Nav (single bar: logo | message | Contact, Menu)
+ * To remove when site is complete: delete this file and remove the banner from each page.
  */
+
+/* No gap between top of viewport and nav bar */
+html.has-under-construction-banner {
+  margin: 0;
+  padding: 0;
+}
+body.has-under-construction-banner {
+  margin: 0;
+}
 
 #under-construction-banner {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
-  max-width: 85%;
-  height: 0.45in;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0;
   z-index: 10001;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
   padding: 0 1.5em;
-  background: rgba(42, 47, 74, 0.92);
-  border-bottom: 1px solid rgba(212, 212, 255, 0.08);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(244, 244, 255, 0.7);
+  min-height: 3.25em;
   box-sizing: border-box;
-  pointer-events: none;
+  pointer-events: auto;
+  background: #2a2f4a;
+  border-bottom: 1px solid rgba(212, 212, 255, 0.08);
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(244, 244, 255, 0.9);
+}
+
+#under-construction-banner .uc-logo {
+  border: 0;
+  font-size: 0.8em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+#under-construction-banner .uc-logo strong {
+  background-color: #ffffff;
+  color: #242943;
+  padding: 0.15em 0.25em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#under-construction-banner .uc-logo:hover strong {
+  background-color: #9bf1ff;
+}
+
+#under-construction-banner .uc-message {
+  font-size: 0.7em;
+  letter-spacing: 0.12em;
+  color: rgba(244, 244, 255, 0.85);
+  text-align: center;
+  flex: 1;
+  padding: 0 1em;
+  min-width: 0;
+}
+
+#under-construction-banner .uc-nav {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+#under-construction-banner .uc-nav a {
+  border: 0;
+  font-size: 0.8em;
+  padding: 0 0.75em;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#under-construction-banner .uc-nav a:hover {
+  color: #9bf1ff;
+}
+
+#under-construction-banner .uc-nav a[href="#menu"] {
+  padding-right: 3.5em;
+  position: relative;
+}
+
+#under-construction-banner .uc-nav a[href="#menu"]::before {
+  content: "";
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 20px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32' viewBox='0 0 24 32' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 2px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='11' x2='24' y2='11' /%3E%3Cline x1='0' y1='21' x2='24' y2='21' /%3E%3Cline x1='0' y1='16' x2='24' y2='16' /%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px 20px;
+  opacity: 0.9;
 }
 
 body.has-under-construction-banner {
-  padding-top: 1in;
+  padding-top: 3.25em;
 }
 
 body.has-under-construction-banner #wrapper {
   padding-top: 0;
+}
+
+/* Hero starts right under nav bar (no gap between nav and content) */
+body.has-under-construction-banner #banner {
+  padding-top: 3.25em;
+}
+
+@media screen and (max-width: 736px) {
+  #under-construction-banner {
+    flex-wrap: wrap;
+    padding: 0.5em 1em;
+    min-height: auto;
+  }
+  #under-construction-banner .uc-message {
+    order: 3;
+    flex-basis: 100%;
+    font-size: 0.6em;
+    padding: 0.25em 0 0;
+  }
+  body.has-under-construction-banner {
+    padding-top: 4em;
+  }
 }

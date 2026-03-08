@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="has-under-construction-banner">
   <head>
     <title>Samyak Life</title>
     <meta charset="utf-8" />
@@ -17,22 +17,26 @@
       .human-test-box p { margin-bottom: 0.5em; }
       .human-test-btn { margin-right: 0.5em; padding: 0.4em 0.8em; cursor: pointer; background: rgba(212,212,255,0.1); color: inherit; border: 1px solid rgba(212,212,255,0.3); }
       .human-test-btn:hover { border-color: #9bf1ff; color: #9bf1ff; }
+      /* Samyak Life intro: 50% width on laptop, full width on phone */
+      #banner > .inner > .content { max-width: 50%; box-sizing: border-box; }
+      #banner > .inner > .content p { font-family: Calibri, "Segoe UI", sans-serif; font-weight: normal; text-transform: none; letter-spacing: normal; font-size: 1.05em; margin-bottom: 1em; line-height: 1.6; }
+      @media screen and (max-width: 768px) {
+        #banner > .inner > .content { max-width: 100%; }
+      }
     </style>
   </head>
   <body class="is-preload has-under-construction-banner">
-    <div id="under-construction-banner">Under Construction – We're Building Something Meaningful.</div>
+    <div id="under-construction-banner">
+      <a href="index.html" class="uc-logo"><strong>Samyak</strong> <span>Life</span></a>
+      <span class="uc-message">Under Construction – We're Building Something Meaningful.</span>
+      <nav class="uc-nav">
+        <a href="#contact">Contact</a>
+        <a href="#menu">Menu</a>
+      </nav>
+    </div>
     <!-- Wrapper -->
     <div id="wrapper">
-      <!-- Header -->
-      <header id="header" class="alt">
-        <a href="index.html" class="logo"
-          ><strong>Samyak</strong> <span>Life</span></a
-        >
-        <nav>
-          <a href="#contact">Contact</a>
-          <a href="#menu">Menu</a>
-        </nav>
-      </header>
+      <header id="header" class="alt" style="display: none;" aria-hidden="true"></header>
 
       <!-- Menu -->
       <nav id="menu">
@@ -58,17 +62,14 @@
           <header class="major">
             <h1>R Manandhar</h1>
             <p>
-              Assisting you in your <br />
-              personal & professional excellence
+              | Trainer | Psychological Counsellor| <br />
+              | Writer | Life Coach | Mindfulness Trainer |
             </p>
           </header>
           <div class="content">
             <p>
-              Trainer/Consultant<br />
-              Writer <br />
-              Life coach <br />
-              Psychological counsellor <br />
-              Mindfulness Practioner
+              Samyak Life <i>(formerly KABULE – the Wise Leader)</i> was founded by <br/> R. Manandhar on a simple belief: true leadership begins within.
+              Since 2006, we have been supporting professionals and organizations around the world to grow with awareness, clarity, and integrity.
             </p>
             <ul class="actions">
               <li>
@@ -97,7 +98,7 @@
               <img src="images/pic02.jpg" alt="" />
             </span>
             <header class="major">
-              <h3><a href="landing.html" class="link">Team Building Retreats</a></h3>
+              <h3><a href="staffRetreatFacilitation.html" class="link">Team Building Retreats</a></h3>
               <p>Happiness Learning Joyshop</p>
             </header>
           </article>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="has-under-construction-banner">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,18 +14,16 @@
     <link rel="stylesheet" href="assets/css/under-construction.css" />
   </head>
   <body class="is-preload has-under-construction-banner">
-    <div id="under-construction-banner">Under Construction – We're Building Something Meaningful.</div>
+    <div id="under-construction-banner">
+      <a href="index.html" class="uc-logo"><strong>Samyak</strong> <span>Life</span></a>
+      <span class="uc-message">Under Construction – We're Building Something Meaningful.</span>
+      <nav class="uc-nav">
+        <a href="index.html#contact">Contact</a>
+        <a href="#menu">Menu</a>
+      </nav>
+    </div>
     <div id="wrapper">
-      <!-- Header -->
-      <header id="header" class="alt">
-        <a href="index.html" class="logo"
-          ><strong>Samyak</strong> <span>Life</span></a
-        >
-        <nav>
-          <a href="index.html#contact">Contact</a>
-          <a href="#menu">Menu</a>
-        </nav>
-      </header>
+      <header id="header" class="alt" style="display: none;" aria-hidden="true"></header>
 
       <!-- Menu -->
       <nav id="menu">
@@ -155,6 +153,37 @@
         <img id="lightbox-img" src="" />
         <button class="lightbox-next">&#10095;</button>
       </div>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <ul class="icons">
+          <li>
+            <a href="https://www.facebook.com/KabuleTheWiseLeader" class="icon brands alt fa-facebook-f"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a href="https://www.instagram.com/leadership.nepal/" class="icon brands alt fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@rmanandhar1258" class="icon brands alt fa-youtube"
+              ><span class="label">Youtube</span></a
+            >
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/rajendra-manandhar-0b999447/" class="icon brands alt fa-linkedin-in"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; R Manandhar</li>
+        </ul>
+      </div>
+    </footer>
     </div>
 
     <!-- JS -->
